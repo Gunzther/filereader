@@ -1,5 +1,11 @@
 package filereader;
 
+/**
+ * Create TaskTimer and Tasks.
+ * Measure the elapsed time in each task.
+ * 
+ * @author Gunthee tawewatmongkol
+ */
 public class Main {
 	public static void main(String[]args) {
 		TaskTimer task = new TaskTimer();

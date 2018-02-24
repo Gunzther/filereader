@@ -1,13 +1,24 @@
 package filereader;
 
+/**
+ * Read text from URL by using InputStreamReader and append it to String.
+ * 
+ * @author Gunthee tawewatmongkol
+ */
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class ReadFileToStringTask implements Runnable{
-	/** uml of Alice-in-Wonderland 	*/
+	/** URL of Alice-in-Wonderland 	*/
 	private final static String ALICE = "http://se.cpe.ku.ac.th/doc/samples/Alice-in-Wonderland.txt";
 	
+	/**
+	 * Read text from URL by using InputStreamReader and append it to String.
+	 * 
+	 * @param url
+	 * @return all text in url.
+	 */
 	public String readFileToString(String url)  {
 		InputStream in;
 		String all = "";
@@ -32,6 +43,7 @@ public class ReadFileToStringTask implements Runnable{
 		readFileToString(ALICE);
 	}
 	
+	@Override
 	public String toString() {
 		int chars = readFileToString(ALICE).length();
 		String intro = "Alice-in-Wonderland.txt using InputStreamReader, append to String.";
